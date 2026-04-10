@@ -20,26 +20,27 @@ from pathlib import Path
 # ============================================================
 
 def check_mental_models(content: str) -> tuple[bool, str]:
-    """检查心智模型数量（3-7个）"""
+    """检查心智模型/思维习惯数量（3-7个）"""
+    # v3模板用"我看问题的方式"，女娲用"心智模型"
     models = re.findall(r'^###\s+(?:模型|Model|心智模型)\s*\d', content, re.MULTILINE)
     if not models:
         in_section = False
         count = 0
         for line in content.split('\n'):
-            if re.match(r'^##\s+.*心智模型|Mental Model', line, re.IGNORECASE):
+            if re.match(r'^##\s+.*(心智模型|Mental Model|我看问题的方式)', line, re.IGNORECASE):
                 in_section = True
                 continue
-            if in_section and re.match(r'^##\s+', line) and '心智模型' not in line:
+            if in_section and re.match(r'^##\s+', line) and '心智模型' not in line and '我看问题' not in line:
                 break
             if in_section and re.match(r'^###\s+', line):
                 count += 1
         if count > 0:
             passed = 3 <= count <= 7
-            return passed, f"{count}个心智模型 {'✅' if passed else '❌ (应为3-7个)'}"
+            return passed, f"{count}个思维模型/习惯 {'✅' if passed else '❌ (应为3-7个)'}"
 
     count = len(models)
     if count == 0:
-        return False, "未检测到心智模型section"
+        return False, "未检测到心智模型/思维习惯section"
     passed = 3 <= count <= 7
     return passed, f"{count}个心智模型 {'✅' if passed else '❌ (应为3-7个)'}"
 
@@ -52,7 +53,7 @@ def check_limitations(content: str) -> tuple[bool, str]:
 
 def check_expression_dna(content: str) -> tuple[bool, str]:
     """检查表达DNA辨识度"""
-    dna_section = bool(re.search(r'表达DNA|Expression DNA|表达风格', content, re.IGNORECASE))
+    dna_section = bool(re.search(r'表达DNA|Expression DNA|表达风格|我说话的方式', content, re.IGNORECASE))
     if not dna_section:
         return False, "❌ 未找到表达DNA section"
 
@@ -63,7 +64,7 @@ def check_expression_dna(content: str) -> tuple[bool, str]:
 
 def check_honest_boundary(content: str) -> tuple[bool, str]:
     """检查诚实边界（至少3条）"""
-    boundary_match = re.search(r'(?:##\s+.*诚实边界|## Honest Boundary)(.*?)(?=\n##\s|\Z)', content, re.DOTALL | re.IGNORECASE)
+    boundary_match = re.search(r'(?:##\s+.*(?:诚实边界|我明确不懂|Honest Boundary))(.*?)(?=\n##\s|\Z)', content, re.DOTALL | re.IGNORECASE)
     if not boundary_match:
         return False, "❌ 未找到诚实边界section"
 

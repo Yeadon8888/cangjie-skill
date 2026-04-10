@@ -224,9 +224,12 @@ cangjie-skill/
 │   ├── quality_check.py              # 质量自检（女娲6项 + 仓颉5项）
 │   └── compile-prompt.py             # Skill→API prompt 编译器
 ├── examples/
-│   └── paul-graham-perspective/      # PG示例（含完整调研数据）
-│       ├── SKILL.md                  # 仓颉v3蒸馏的PG Skill
-│       └── references/research/      # 6维调研数据
+│   ├── paul-graham-perspective/      # Paul Graham（创业/写作/独立思考）
+│   │   ├── SKILL.md
+│   │   └── references/research/      # 6维调研数据
+│   └── adler-perspective/            # 阿德勒（个体心理学/课题分离/被讨厌的勇气）
+│       ├── SKILL.md
+│       └── references/research/      # 《被讨厌的勇气》完整文本
 └── LICENSE                           # MIT
 ```
 
