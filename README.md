@@ -108,6 +108,7 @@ I suspect 收费会破坏这个过程。
 |------|------|---------|---------|
 | **Paul Graham** | 创业/写作/独立思考 | [paul-graham-skill](https://github.com/Yeadon8888/paul-graham-skill) | `npx skills add Yeadon8888/paul-graham-skill` |
 | **阿德勒** | 个体心理学/课题分离/被讨厌的勇气 | [adler-skill](https://github.com/Yeadon8888/adler-skill) | `npx skills add Yeadon8888/adler-skill` |
+| **峰哥亡命天涯** | 现实主义去魅/止损思维/底层观察 | [fengge-skill](https://github.com/Yeadon8888/fengge-skill) | `npx skills add Yeadon8888/fengge-skill` |
 
 想蒸馏不在列表里的人？安装仓颉，说「蒸馏一个XXX」就行。
 
