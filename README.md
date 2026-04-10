@@ -25,7 +25,7 @@
 
 基于 [女娲.skill](https://github.com/alchaincyf/nuwa-skill)（MIT）架构升级，感谢 [花叔](https://x.com/AlchainHust) 的开源。
 
-[和女娲的区别](#仓颉-vs-女娲) · [效果对比](#效果对比) · [安装](#安装) · [工作原理](#工作原理)
+[和女娲的区别](#仓颉-vs-女娲) · [效果对比](#效果对比) · [已蒸馏人物](#已蒸馏人物) · [安装](#安装) · [工作原理](#工作原理)
 
 </div>
 
@@ -100,10 +100,23 @@ I suspect 收费会破坏这个过程。
 
 ---
 
+## 已蒸馏人物
+
+每个人物都是独立的、可直接安装使用的 Skill：
+
+| 人物 | 领域 | 独立仓库 | 一键安装 |
+|------|------|---------|---------|
+| **Paul Graham** | 创业/写作/独立思考 | [paul-graham-skill](https://github.com/Yeadon8888/paul-graham-skill) | `npx skills add Yeadon8888/paul-graham-skill` |
+| **阿德勒** | 个体心理学/课题分离/被讨厌的勇气 | [adler-skill](https://github.com/Yeadon8888/adler-skill) | `npx skills add Yeadon8888/adler-skill` |
+
+想蒸馏不在列表里的人？安装仓颉，说「蒸馏一个XXX」就行。
+
+---
+
 ## 安装
 
 ```bash
-npx skills add yeadon-1/cangjie-skill
+npx skills add Yeadon8888/cangjie-skill
 ```
 
 然后在 Claude Code 里：
