@@ -86,7 +86,11 @@ description: |
 - 只在 1 份素材中出现 → 保留但标注来源单一
 - 不同素材中出现矛盾 → 保留双方，这本身就是内在矛盾的证据
 
-**铁律：没有保存素材的蒸馏等于空中楼阁。调研文件必须在 `references/research/` 下可查。**
+**铁律：**
+- 没有保存提取证据的蒸馏等于空中楼阁
+- `references/research/` 下最终保留三个文件：`01-sources.md`（来源清单）+ `02-extraction-notes.md`（提取记录）+ `03-key-quotes.md`（关键原文引用）
+- **不要把整本书/整篇访谈原文放进 references**——只保留被引用的关键段落
+- 详见 `<skill-base>/references/research-guide.md`
 
 ---
 
