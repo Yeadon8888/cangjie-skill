@@ -271,7 +271,13 @@ python3 scripts/compile-prompt.py examples/paul-graham-perspective/SKILL.md
 python3 scripts/quality_check.py examples/paul-graham-perspective/SKILL.md
 ```
 
-11项自动检查（女娲基础6项 + 仓颉升级5项），覆盖心智模型、触发条件、推理步骤、推理示例链、反模式护栏、Harness Engine 等。
+12项 v3 结构检查，覆盖信念形成故事、决策反思、本人失败、内在矛盾、认知边界、第一人称一致性，并明确拦截已经弃用的 Step 1/2/3 显式推理流程。
+
+运行仓库内的回归测试：
+
+```bash
+python3 -m unittest discover -s tests -v
+```
 
 ---
 
