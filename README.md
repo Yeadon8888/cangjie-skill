@@ -1,5 +1,7 @@
 <div align="center">
 
+[English](README_EN.md) | **中文**
+
 # 仓颉.skill
 
 > *仓颉观鸟兽之迹，知分理之可相别异也。*
